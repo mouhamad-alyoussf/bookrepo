@@ -64,7 +64,7 @@ public class BookController {
     }
 
     @GetMapping
-    @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
+
     public ResponseEntity<?> getAllBooks() {
         bookrepo.findAll();
         List<BOOK> books = bookService.getAllBook();
